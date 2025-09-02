@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS180 Project #0: Becoming Friends with Your Camera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+            color: #1e293b; /* Tailwind slate-800 */
+        }
+        .header-glow {
+            text-shadow: 0 0 8px rgba(99, 102, 241, 0.3), 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+        .key-term {
+            color: #3730a3; /* Tailwind indigo-800 */
+            background-color: #e0e7ff; /* Tailwind indigo-100 */
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .image-container {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .image-container:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="text-center">
+                <p class="text-sm font-medium text-indigo-600">CS180: Intro to Computer Vision and Computational Photography</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight header-glow">Project #0: Becoming Friends with Your Camera</h1>
+                <p class="mt-2 text-lg text-slate-600">Qixiang HUA 3041994959</p>
+                <p class="mt-1 text-md text-slate-500">capper.hua@berkeley.edu</p>
+
+                <nav class="mt-3 border-t border-slate-200 pt-3">
+                    <ul class="flex justify-center space-x-6 md:space-x-8 text-lg">
+                        <li><a href="#part1" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">📸 Selfie</a></li>
+                        <li><a href="#part2" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">🏛️ Architecture</a></li>
+                        <li><a href="#part3" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">🎬 Dolly Zoom</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section id="part1" class="mb-20 scroll-mt-20 text-2xl">
+            <div class="text-center mb-10">
+                <span class="text-indigo-500 font-semibold">Part 1</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">Selfie: The Wrong Way vs. The Right Way</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-3">The "Wrong" Way: Close-up</h3>
+                    <div class="bg-white p-3 rounded-lg image-container">
+                        <img src="1_1.jpg" alt="Close-up, wide-angle selfie showing perspective distortion" class="rounded-md w-full" loading="lazy">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-3">The "Right" Way: Stepped Back & Zoomed In</h3>
+                    <div class="bg-white p-3 rounded-lg image-container">
+                        <img src="1_2.jpg" alt="Portrait taken from a distance with zoom, showing a compressed, more natural look" class="rounded-md w-full" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-white p-8 rounded-lg shadow-md space-y-4">
+                <h4 class="text-2xl font-bold mb-4">Why The Difference?</h4>
+                <p class="text-lg leading-relaxed text-slate-800">The first image, taken close-up with a wide-angle lens, suffers from <span class="key-term">perspective distortion</span>. Features closer to the camera (like the nose) appear disproportionately larger than those further away.</p>
+                <p class="text-lg leading-relaxed text-slate-800">In the second photo, by increasing the distance to the subject and using optical zoom, the camera captures a narrower field of view, and the relative distances between facial features become much smaller compared to the overall camera-to-subject distance. This <span class="key-term">compresses the features</span>, resulting in a more natural portrait that better reflects how we see people in real life.</p>
+            </div>
+        </section>
+
+        <section id="part2" class="mb-20 scroll-mt-20 text-2xl bg-slate-100/75 rounded-2xl py-16 sm:py-20">
+            <div class="text-center mb-10 px-4">
+                <span class="text-indigo-500 font-semibold">Part 2</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">Architectural Perspective Compression</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-start px-4">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-3">Telephoto Shot: Far Away & Zoomed In</h3>
+                     <div class="bg-white p-3 rounded-lg image-container">
+                        <img src="2_1.jpg" alt="Street view taken with a telephoto lens from far away" class="rounded-md w-full" loading="lazy">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold mb-3">Wide Shot: Close Up & No Zoom</h3>
+                     <div class="bg-white p-3 rounded-lg image-container">
+                        <img src="2_2.jpg" alt="Street view taken with a wide-angle lens up close" class="rounded-md w-full" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-white p-8 rounded-lg shadow-md mx-4 space-y-4">
+                <h4 class="text-2xl font-bold mb-4">Flattening Space</h4>
+                <p class="text-lg leading-relaxed text-slate-800">The first image demonstrates <span class="key-term">perspective compression</span>. By standing far away and zooming in, the distance between foreground objects and background objects appears significantly reduced. This creates a "flattened" effect where layers of the scene seem stacked on top of one another.</p>
+                <p class="text-lg leading-relaxed text-slate-800">The second, wide-angle shot provides a more familiar sense of depth and scale. The perspective lines converge more dramatically, and objects in the foreground appear much larger than those in the distance, giving a stronger illusion of three-dimensional space.</p>
+            </div>
+        </section>
+
+        <section id="part3" class="scroll-mt-20 text-2xl">
+            <div class="text-center mb-10">
+                 <span class="text-indigo-500 font-semibold">Part 3</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">The Dolly Zoom (Vertigo Effect)</h2>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="bg-white p-3 rounded-lg image-container max-w-xl mx-auto">
+                    <img src="3.GIF" alt="Animated GIF demonstrating the dolly zoom effect" class="rounded-md w-full" loading="lazy">
+                </div>
+            </div>
+
+            <div class="mt-10 bg-white p-8 rounded-lg shadow-md space-y-4">
+                <h4 class="text-2xl font-bold mb-4">How It Works</h4>
+                <p class="text-lg leading-relaxed text-slate-800">The Dolly Zoom, famously known as the "Vertigo shot," is a powerful cinematic effect. It is achieved by combining two opposite camera actions simultaneously: <span class="key-term">physically moving the camera</span> (dollying) towards or away from a subject while simultaneously <span class="key-term">zooming the lens</span> in the opposite direction.</p>
+                <p class="text-lg leading-relaxed text-slate-800">The result is that the main subject in the foreground stays roughly the same size and position in the frame, while the background appears to warp—either expanding dramatically or compressing inwards.</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 text-slate-300 mt-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p>CS180 Project #0 | Fall 2025</p>
+            <p class="text-sm mt-1 text-slate-400">Qixiang HUA | 3041994959 | capper.hua@berkeley.edu</p>
+        </div>
+    </footer>
+
+</body>
+</html>
